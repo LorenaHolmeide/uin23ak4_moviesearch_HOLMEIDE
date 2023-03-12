@@ -1,4 +1,6 @@
 //ComponentBranch
+import MovieCard from './MovieCard';
+import Search from './Search';
 export default function SearchResult({ movies, setSearch, getMovies }) {
     return (
         <>
