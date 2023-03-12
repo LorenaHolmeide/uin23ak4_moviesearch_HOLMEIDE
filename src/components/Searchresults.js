@@ -1,3 +1,4 @@
+//ComponentBranch
 import MovieCard from './MovieCard';
 import Search from './Search';
 
