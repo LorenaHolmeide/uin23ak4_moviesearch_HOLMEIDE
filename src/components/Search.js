@@ -1,3 +1,4 @@
+//ComponentBranch
 export default function Search({ setSearch, getMovies }) {
 
     const handleSubmit = (event) => {
