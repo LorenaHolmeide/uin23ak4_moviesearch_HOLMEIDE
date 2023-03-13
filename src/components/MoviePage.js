@@ -14,7 +14,7 @@ export default function MoviePage() {
     }, [slug]);
 
     return (
-        <section>
+        <section className="movie-page" >
             <img src={movie.Poster} alt={movie.Title} />
             <h1>{movie.Title}</h1>
             <p>Year released: {movie.Released}</p>
