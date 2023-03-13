@@ -1,12 +1,11 @@
 //ComponentBranch
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
-//export default function MoviePage({ movies })
+
 export default function MoviePage() {
     const { slug } = useParams()
-    //const movie = movies.find((m) => m.Title.replace(/\s/g, "-").toLowerCase() === slug)
-
     const [movie, setMovie] = useState({});
+
     useEffect(() => {
         fetch(`http://www.omdbapi.com/?apikey=2b4982d&t=${slug}`)
             .then(response => response.json())
