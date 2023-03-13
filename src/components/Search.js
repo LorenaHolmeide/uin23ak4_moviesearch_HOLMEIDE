@@ -1,5 +1,5 @@
 //ComponentBranch
-export default function Search({ setSearch, getMovies }) {
+export default function Search({ search, setSearch, getMovies }) {
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -13,8 +13,12 @@ export default function Search({ setSearch, getMovies }) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="search" placeholder="SearchField.." onChange={handleSearch} />
-            <button type="submit" onClick={getMovies}>Search!</button>
+            <input type="search" placeholder="SearchField.." onChange={handleSearch} onKeyUp={() => {
+                if (search.length >= 3) {
+                    getMovies();
+                }
+            }} />
+
         </form>
     )
 
