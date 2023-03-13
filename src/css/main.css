@@ -52,4 +52,13 @@ main > article {
   position: relative;
 }
 
+.movie-page {
+  margin: auto;
+  max-width: 300px;
+  width: 100%;
+  border: 1px solid #969595;
+  padding: 2rem;
+  text-align: center;
+}
+
 /*# sourceMappingURL=main.css.map */
