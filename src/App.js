@@ -6,12 +6,14 @@ import { useEffect, useState } from 'react';
 
 import Layout from './components/Layout';
 import MoviePage from './components/MoviePage';
-import SearchRes from './components/SearchResult';
+import SearchResult from './components/SearchResult';
+
 
 
 function App() {
   const [movies, setMovies] = useState([])
   const [search, setSearch] = useState('James Bond')
+
 
   const getMovies = async () => {
     const response = await fetch(`https://www.omdbapi.com/?s=${search}&apikey=2b4982d`)
@@ -28,7 +30,7 @@ function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<SearchRes movies={movies} setSearch={setSearch} getMovies={getMovies} />} />
+        <Route index element={<SearchResult search={search} movies={movies} setSearch={setSearch} getMovies={getMovies} />} />
         <Route path=':slug' element={<MoviePage movies={movies} />} />
       </Route>
     </Routes>
