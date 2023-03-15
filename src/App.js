@@ -9,17 +9,23 @@ import MoviePage from './components/MoviePage';
 import SearchResult from './components/SearchResult';
 
 
-
 function App() {
   const [movies, setMovies] = useState([])
   const [search, setSearch] = useState('James Bond')
-
+  const [error, setError] = useState(false)
 
   const getMovies = async () => {
-    const response = await fetch(`https://www.omdbapi.com/?s=${search}&apikey=2b4982d`)
-    const data = await response.json()
-    console.log(data.Search)
-    setMovies(data.Search)
+
+    fetch(`https://www.omdbapi.com/?apikey=2b4982d&s=${search}`)
+      .then(response => response.json())
+      .then(data => {
+        setMovies(data.Search)
+        setError(false)
+      })
+      .catch(error => {
+        console.log(error)
+        setError(true)
+      });
 
   }
 
@@ -27,10 +33,11 @@ function App() {
     getMovies()
   }, [])
 
+
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<SearchResult search={search} movies={movies} setSearch={setSearch} getMovies={getMovies} />} />
+        <Route index element={<SearchResult error={error} search={search} movies={movies} setSearch={setSearch} getMovies={getMovies} />} />
         <Route path=':slug' element={<MoviePage movies={movies} />} />
       </Route>
     </Routes>

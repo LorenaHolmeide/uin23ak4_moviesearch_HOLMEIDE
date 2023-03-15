@@ -1,26 +1,90 @@
+$background-colorOne: #67a9ff20;
+$background-colorTwo: #86a9e676;
+$border-colorPage: #6c76d1;
+$border-colorCard: #d5cefb92;
+$form-border-color: #558defdd;
+$form-focus-border-color: #6a09f2;
+$form-placeholder-border-color: #1b7fd798;
+$container-background-color: #ffffff;
+$container-border-color: #2c8dd267;
+$link-hover-bg-color: #0063cc62;
+$link-color: #0256ff;
+$link-border-color: royalblue;
+
 body {
-    background: #f3f3f3;
-    padding-top: 0;
+    background: $background-colorOne;
+    padding: 2rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+    @media only screen and (max-width: 600px) {
+        max-width: 50%;
+    }
+
+}
+
+.link {
+    cursor: pointer;
+    background-color: $background-colorTwo;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: $link-border-color;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $link-color;
+    transition: background-color 0.35s ease;
+
+    &:hover {
+        background-color: $link-hover-bg-color;
+    }
+
 }
 
 #container {
     width: 100%;
-    max-width: 1200px;
-    background: #fff;
-    border-left: 2px solid #ccc;
-    border-right: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
+    max-width: 1050px;
+    background: $container-background-color;
+    border: 2px solid $container-border-color;
     padding: 2rem;
     margin: 0 auto;
 }
+
 
 main {
     display: flex;
     flex-wrap: wrap;
 }
 
-main>article {
-    background-color: #f3f3f3;
+form {
+    input[type="search"] {
+        max-width: 500px;
+        height: 50px;
+        padding: 0 16px;
+        font-size: 15px;
+        border: 2.5px solid $form-border-color;
+        border-radius: 20px;
+
+        &:focus {
+            border-color: $form-focus-border-color;
+        }
+
+        &::placeholder {
+            color: $form-placeholder-border-color;
+        }
+
+
+    }
 }
 
 .movie-view {
@@ -33,7 +97,6 @@ main>article {
 
 .movie-view a {
     display: inherit;
-    display: inherit;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -43,22 +106,28 @@ main>article {
 
 .movie-view h2 {
     width: 100%;
+    text-align: center;
 }
 
 .movie-card {
     max-width: 300px;
     width: 100%;
-    border: 1px solid #969595;
+    border: 1px solid $border-colorCard;
     padding: 1rem;
     position: relative;
+    background-color: $background-colorOne;
+    border-radius: 20px;
 }
 
 .movie-page {
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
-    max-width: 300px;
+    max-width: 500px;
     width: 100%;
-    border: 1px solid #969595;
-    padding: 2rem;
+    border: 1px solid $border-colorPage;
+    border-radius: 20px;
+    padding: 2.5rem;
     text-align: center;
-
+    background-color: $background-colorOne;
 }
