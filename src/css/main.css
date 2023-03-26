@@ -12,7 +12,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 @media only screen and (max-width: 600px) {
   img {
     max-width: 50%;
@@ -32,7 +31,6 @@ img {
   color: #0256ff;
   transition: background-color 0.35s ease;
 }
-
 .link:hover {
   background-color: rgba(0, 99, 204, 0.3843137255);
 }
@@ -59,11 +57,9 @@ form input[type=search] {
   border: 2.5px solid rgba(85, 141, 239, 0.8666666667);
   border-radius: 20px;
 }
-
 form input[type=search]:focus {
   border-color: #6a09f2;
 }
-
 form input[type=search]::placeholder {
   color: rgba(27, 127, 215, 0.5960784314);
 }
@@ -112,20 +108,19 @@ form input[type=search]::placeholder {
   background-color: rgba(103, 169, 255, 0.1254901961);
 }
 
+/*Telephone-device*/
 @media only screen and (max-width: 600px) {
   #container {
     max-width: 70%;
   }
-
   .movie-card {
     max-width: 60%;
   }
-
   form input[type=search] {
     max-width: 70%;
   }
 }
-
+/*Tablet- device*/
 @media only screen and (max-width: 1024px) {
   #container {
     max-width: 80%;

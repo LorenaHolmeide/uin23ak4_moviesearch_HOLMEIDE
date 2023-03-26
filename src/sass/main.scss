@@ -135,7 +135,7 @@ form {
     background-color: $background-colorOne;
 }
 
-
+/*Telephone-device*/
 @media only screen and (max-width: 600px) {
     #container {
         max-width: 70%;
@@ -153,6 +153,7 @@ form {
 
 }
 
+/*Tablet- device*/
 @media only screen and (max-width: 1024px) {
     #container {
         max-width: 80%;
