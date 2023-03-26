@@ -58,6 +58,7 @@ img {
     border: 2px solid $container-border-color;
     padding: 2rem;
     margin: 0 auto;
+
 }
 
 
@@ -117,6 +118,8 @@ form {
     position: relative;
     background-color: $background-colorOne;
     border-radius: 20px;
+
+
 }
 
 .movie-page {
@@ -130,4 +133,28 @@ form {
     padding: 2.5rem;
     text-align: center;
     background-color: $background-colorOne;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #container {
+        max-width: 70%;
+    }
+
+    .movie-card {
+        max-width: 60%;
+    }
+
+    form {
+        input[type="search"] {
+            max-width: 70%;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    #container {
+        max-width: 80%;
+    }
 }

@@ -108,4 +108,21 @@ form input[type=search]::placeholder {
   background-color: rgba(103, 169, 255, 0.1254901961);
 }
 
+@media only screen and (max-width: 600px) {
+  #container {
+    max-width: 70%;
+  }
+  .movie-card {
+    max-width: 60%;
+  }
+  form input[type=search] {
+    max-width: 70%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #container {
+    max-width: 80%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
