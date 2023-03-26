@@ -26,10 +26,6 @@ img {
     max-width: 100%;
     height: auto;
 
-    @media only screen and (max-width: 600px) {
-        max-width: 50%;
-    }
-
 }
 
 .link {
@@ -143,6 +139,10 @@ form {
 
     .movie-card {
         max-width: 60%;
+    }
+
+    img {
+        max-width: 50%;
     }
 
     form {

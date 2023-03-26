@@ -12,11 +12,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-@media only screen and (max-width: 600px) {
-  img {
-    max-width: 50%;
-  }
-}
 
 .link {
   cursor: pointer;
@@ -115,6 +110,9 @@ form input[type=search]::placeholder {
   }
   .movie-card {
     max-width: 60%;
+  }
+  img {
+    max-width: 50%;
   }
   form input[type=search] {
     max-width: 70%;
